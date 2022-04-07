@@ -1,17 +1,12 @@
+import asyncHandler from '../middlewares/asyncHandler.js';
 import ErrorResponse from '../utils/ErrorResponse.js';
 
-export const getAllPosts = async (req, res, next) => {
-  try {
-    throw new ErrorResponse('YOU SHALL NOT PASS!', 403);
-  } catch (error) {
-    next(error);
-  }
-};
+export const getAllPosts = asyncHandler(async (req, res, next) => res.send('GET all'));
 
-export const createPost = async (req, res) => res.send('POST');
+export const createPost = asyncHandler(async (req, res) => res.send('POST'));
 
-export const getSinglePost = async (req, res) => res.send('GET single');
+export const getSinglePost = asyncHandler(async (req, res) => res.send('GET single'));
 
-export const updatePost = async (req, res) => res.send('PUT');
+export const updatePost = asyncHandler(async (req, res) => res.send('PUT'));
 
-export const deletePost = async (req, res) => res.send('DELETE');
+export const deletePost = asyncHandler(async (req, res) => res.send('DELETE'));
