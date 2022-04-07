@@ -1,4 +1,4 @@
-import asyncHandler from '../middlewares/asyncHandler.js';
+import asyncHandler from '../utils/asyncHandler.js';
 import ErrorResponse from '../utils/ErrorResponse.js';
 
 export const getAllPosts = asyncHandler(async (req, res, next) => res.send('GET all'));
