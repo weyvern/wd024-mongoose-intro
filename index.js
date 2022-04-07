@@ -1,3 +1,4 @@
+import './db/index.js';
 import express from 'express';
 import postsRouter from './routes/postsRouter.js';
 import errorHandler from './middlewares/errorHandler.js';
