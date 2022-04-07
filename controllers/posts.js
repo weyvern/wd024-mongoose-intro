@@ -1,4 +1,12 @@
-export const getAllPosts = async (req, res, next) => res.send('GET all');
+import ErrorResponse from '../utils/ErrorResponse.js';
+
+export const getAllPosts = async (req, res, next) => {
+  try {
+    throw new ErrorResponse('YOU SHALL NOT PASS!', 403);
+  } catch (error) {
+    next(error);
+  }
+};
 
 export const createPost = async (req, res) => res.send('POST');
 
